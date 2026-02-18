@@ -1,137 +1,125 @@
-
-<!-- ============================= -->
-<!-- script.js (More Attractive, Interactive) -->
-<!-- ============================= -->
 const chapters = {
   1: `
 # 📱 Chapter 1: Introduction to Mobile Computing
-
 Mobile development is unique because of:
-- 🌐 Mobility — devices constantly move & change networks
-- 🔋 Battery constraints — energy‑aware engineering
-- 🧠 Context Awareness — sensors, GPS, accelerometer
+- 🌐 Mobility — networks fluctuate
+- 🔋 Battery constraints
+- 🧠 Context awareness — sensors, GPS, accelerometer
 
-## 🏛 Android Architecture Overview
-- **Linux Kernel:** hardware & power
-- **HAL:** hardware abstraction
-- **ART Runtime:** fast optimized execution
-- **Java/Kotlin APIs:** Your playground
+## 🏛 Android Architecture
+- Linux Kernel
+- Hardware Abstraction Layer
+- ART Runtime
+- Framework APIs
 
-## 🛠 WAY OUT (Practical)
-✔ Modify app label in Manifest
-✔ Install Android Sources
-✔ Rebuild project successfully
-  `,
+## 🛠 WAY OUT
+✔ Change Manifest label  
+✔ Install Android Sources  
+✔ Rebuild the project  
+`,
 
   2: `
 # 🎨 Chapter 2: UI & Design Principles
+Learn Material Design 3 (modern Android UI model).
 
-Design mobile UI using **Material Design 3 (2026 standard)**.
-
-## 🗂 Layouts
-- ConstraintLayout — ✨ powerful & flexible
+## Layout Systems
+- ConstraintLayout (recommended)
 - LinearLayout
 - FrameLayout
 
-## 🎤 Multimodal Interaction (Modern Apps)
-- Text‑to‑speech
+## Multimodal UI
+- TTS
 - Voice commands
-- Gesture interactions
+- Gestures
 
 ## 🛠 WAY OUT
-Build a multilingual greeting app powered by TTS.
-  `,
+Create a multilingual greeting app.
+`,
 
   3: `
 # 🔗 Chapter 3: Intents & Services
+## Intents
+- Explicit — navigate screens
+- Implicit — open camera, browser
 
-## 🧭 Intents — Android communication system
-- Explicit Intents — navigate your screens
-- Implicit Intents — use device apps (Camera, Browser)
-
-## ⚙ Background Services
+## Services
 - Started
 - Bound
-- Foreground (with notification)
+- Foreground
 
 ## 🛠 WAY OUT
-Create a 2‑screen navigation app using Explicit Intents.
-  `,
+Build a 2-screen Intent app.
+`,
 
   4: `
 # 💾 Chapter 4: Storage & Databases
+## Storage Options
+- DataStore
+- Room Database
+- File Storage
 
-## Storage Types
-- SharedPreferences / DataStore
-- Room Database (modern SQLite)
-- File storage
-
-## 🔄 Syncing
-Use WorkManager for background syncing.
+## Sync
+Use WorkManager for scheduled sync.
 
 ## 🛠 WAY OUT
-Build a persistent Note‑Taking app.
-  `,
+Build a persistent Notes App.
+`,
 
   5: `
 # 🌐 Chapter 5: Networking
-
-## 🌍 Web APIs
+## APIs
 - REST + JSON
-- UI loading/success/error states
+- State Machine (Loading, Success, Error)
 
-## 🔔 Notifications
-- Notification channels
-- Alarms
+## Notifications
+- Channels
+- Scheduled alarms
 
 ## 🛠 WAY OUT
-Build a Live API News Fetcher.
-  `,
+Build a Live News Fetcher.
+`,
 
   6: `
 # 🎬 Chapter 6: Graphics & Multimedia
-
-## Graphics for Mobile Apps
+## Graphics
 - Canvas API
-- Vector drawables
+- Shapes, charts, drawings
 
 ## Media
-- ExoPlayer (2026 standard)
-- SoundPool effects
+- ExoPlayer
+- SoundPool
 
 ## 🛠 WAY OUT
-Create a multimedia gallery.
-  `,
+Build a multimedia gallery.
+`,
 
   7: `
 # 📍 Chapter 7: Location & Maps
-
-## Location Basics
+## Location APIs
 - Fused Location Provider
-- Runtime permissions
+- Permissions
 
 ## Maps
-- Map markers
-- Custom camera zoom
+- Markers
+- Camera controls
 
 ## 🛠 WAY OUT
-Build a Local Resource Finder Map App.
-  `,
+Build a Local Resource Finder App.
+`,
 
   8: `
 # 🚀 Chapter 8: Deployment
-
-## Packaging for Play Store
-- AAB (App Bundle)
-- App signing
+## Packaging
+- App Bundles (.aab)
+- Signing keys
 
 ## Optimization
-- R8 shrinking + obfuscation
+- R8 shrinking
 - Memory profiling
 
 ## 🛠 FINAL TASK
-Export signed release bundle.
-  `,
+Generate signed release bundle.
+`,
 };
 
 function loadChapter(num) {
@@ -141,7 +129,7 @@ function loadChapter(num) {
   content.style.animation = "fadeIn 0.6s ease";
 
   content.innerHTML = `
-    <h2>${chapters[num].split("\n")[1]}</h2>
+    <h2>${chapters[num].split("\\n")[1]}</h2>
     <pre>${chapters[num]}</pre>
   `;
 }
